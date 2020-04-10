@@ -1,4 +1,11 @@
 <p id="notice"><%= notice %></p>
 <h1>Posts</h1>
 <%= render @posts %>
+
+<%= @posts.each do |post| %>
+  <div class="posts-index-item">
+    <%=post.text %>
+  </div>
+<% end %>
+
 <%= link_to 'New Post', new_post_path %>
