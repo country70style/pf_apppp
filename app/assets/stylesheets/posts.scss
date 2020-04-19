@@ -1,3 +1,13 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.jambotron {
+  color: red;
+  background-image: url("top_back.jpeg")center no-repeat;
+  background-size: cover;
+}
+body {
+    background-image: url("top_back.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
