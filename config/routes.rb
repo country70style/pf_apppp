@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :perks
   resources :weapons
   resources :posts 
   root to: 'posts#index'

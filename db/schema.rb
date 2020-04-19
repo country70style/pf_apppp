@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_19_230251) do
+ActiveRecord::Schema.define(version: 2020_04_19_231239) do
+
+  create_table "perks", force: :cascade do |t|
+    t.string "name"
+    t.integer "rate"
+    t.text "context"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "text"
