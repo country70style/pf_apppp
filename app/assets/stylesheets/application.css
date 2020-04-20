@@ -13,14 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+ @import "layouts";
 
  main {
-     min-height: calc(100vh - 120px);
-     overflow: hidden;
- }
-
- header {
-     height: 60px;
+    height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px);
+     padding-top: 60px;
  }
 
  footer {
