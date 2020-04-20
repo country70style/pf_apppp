@@ -5,7 +5,7 @@ RSpec.describe "weapons/show", type: :view do
     @weapon = assign(:weapon, Weapon.create!(
       name: "Name",
       attack: 2,
-      rate: 3,
+      fire_rate: 3,
       context: "MyText"
     ))
   end

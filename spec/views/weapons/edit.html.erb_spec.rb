@@ -5,7 +5,7 @@ RSpec.describe "weapons/edit", type: :view do
     @weapon = assign(:weapon, Weapon.create!(
       name: "MyString",
       attack: 1,
-      rate: 1,
+      fire_rate: 1,
       context: "MyText"
     ))
   end
@@ -19,7 +19,7 @@ RSpec.describe "weapons/edit", type: :view do
 
       assert_select "input[name=?]", "weapon[attack]"
 
-      assert_select "input[name=?]", "weapon[rate]"
+      assert_select "input[name=?]", "weapon[fire_rate]"
 
       assert_select "textarea[name=?]", "weapon[context]"
     end
