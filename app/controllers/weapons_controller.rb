@@ -69,6 +69,6 @@ class WeaponsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def weapon_params
-      params.require(:weapon).permit(:name, :attack, :rate, :context)
+      params.require(:weapon).permit(:name, :attack, :fire_rate, :context)
     end
 end
