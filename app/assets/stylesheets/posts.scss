@@ -2,22 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .jambotron {
-  color: red;
+  color: yellow;
   background-image: url("top_back.jpeg")center no-repeat;
   background-size: cover;
 }
+
+.jambotron h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  padding-bottom: 15px;
+}
+
 body {
     background-image: url("top_back.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
-  font-size: 50rem;
-}
-
 h2 {
-  color: red;
+  color: lightgreen;
 }
