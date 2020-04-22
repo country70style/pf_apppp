@@ -20,9 +20,9 @@
         <td><%= weapon.attack %></td>
         <td><%= weapon.fire_rate %></td>
         <td><%= weapon.context %></td>
-        <td><%= link_to 'Show', weapon %></td>
-        <td><%= link_to 'Edit', edit_weapon_path(weapon) %></td>
-        <td><%= link_to 'Destroy', weapon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', weapon, :style=>"color:orange;" %></td>
+        <td><%= link_to 'Edit', edit_weapon_path(weapon), :style=>"color:lightgreen;" %></td>
+        <td><%= link_to 'Destroy', weapon, method: :delete, data: { confirm: 'Are you sure?' }, :style=>"color:red;" %></td>
       </tr>
     <% end %>
   </tbody>

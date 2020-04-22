@@ -18,9 +18,9 @@
         <td><%= perk.name %></td>
         <td><%= perk.rate %></td>
         <td><%= perk.context %></td>
-        <td><%= link_to 'Show', perk %></td>
-        <td><%= link_to 'Edit', edit_perk_path(perk) %></td>
-        <td><%= link_to 'Destroy', perk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', perk, :style=>"color:orange;" %></td>
+        <td><%= link_to 'Edit', edit_perk_path(perk), :style=>"color:lightgreen;" %></td>
+        <td><%= link_to 'Destroy', perk, method: :delete, data: { confirm: 'Are you sure?' }, :style=>"color:red;" %></td>
       </tr>
     <% end %>
   </tbody>
