@@ -13,27 +13,20 @@
  *= require_tree .
  *= require_self
  */
-
- main {
-     padding-top: 50px;
-    margin-bottom: 50px;
-}
-
-header {
-    position: fixed;
-}
-
-
-body {
-    height: 100%;
+ body {
+    background-image: url("top_back.jpeg"); 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 50px 0;
 }
 
 tr {
     color: lightgrey;
 }
 
-.footer {
-    padding-top: 50px;
+footer {
+    text-align: center;
 }
 
  

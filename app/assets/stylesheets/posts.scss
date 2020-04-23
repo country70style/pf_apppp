@@ -3,9 +3,6 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .jambotron {
   color: yellow;
-  background-image: url("top_back.jpeg")center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .jambotron h1 {
@@ -13,12 +10,6 @@
   justify-content: center;
   font-size: 5rem;
   padding-bottom: 15px;
-}
-
-body {
-    background-image: url("top_back.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 h2 {
