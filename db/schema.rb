@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_19_231239) do
+ActiveRecord::Schema.define(version: 2020_04_25_033620) do
 
   create_table "perks", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2020_04_19_231239) do
     t.integer "like"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "weapon_id"
+    t.integer "perk_id"
   end
 
   create_table "weapons", force: :cascade do |t|
