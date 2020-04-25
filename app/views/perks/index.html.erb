@@ -5,6 +5,7 @@
 <table class="table table-bordered">
   <thead>
     <tr>
+      <th>No.</th>
       <th>Name</th>
       <th>Rate</th>
       <th>Context</th>
@@ -15,10 +16,10 @@
   <tbody>
     <% @perks.each do |perk| %>
       <tr>
-        <td><%= perk.name %></td>
+        <td><%= perk.id %></td>
+        <td><%= link_to perk.name, perk, :style=>"color:orange;" %></td>
         <td><%= perk.rate %></td>
         <td><%= perk.context %></td>
-        <td><%= link_to 'Show', perk, :style=>"color:orange;" %></td>
         <td><%= link_to 'Edit', edit_perk_path(perk), :style=>"color:lightgreen;" %></td>
         <td><%= link_to 'Destroy', perk, method: :delete, data: { confirm: 'Are you sure?' }, :style=>"color:red;" %></td>
       </tr>

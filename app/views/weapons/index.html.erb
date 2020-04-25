@@ -7,6 +7,7 @@
       <div class="row">
         <thead>
           <tr>
+            <th>No.</th>
             <th>Name</th>
             <th>Attack</th>
             <th>Fire Rate</th>
@@ -17,11 +18,11 @@
         <tbody>
           <% @weapons.each do |weapon| %>
             <tr>
-              <td><%= weapon.name %></td>
+              <td><%= weapon.id %></td>
+              <td><%= link_to weapon.name, weapon, :style=>"color:orange;" %></td>
               <td><%= weapon.attack %></td>
               <td><%= weapon.fire_rate %></td>
               <td><%= weapon.context %></td>
-              <td><%= link_to 'Show', weapon, :style=>"color:orange;" %></td>
               <td><%= link_to 'Edit', edit_weapon_path(weapon), :style=>"color:lightgreen;" %></td>
               <td><%= link_to 'Destroy', weapon, method: :delete, data: { confirm: 'Are you sure?' }, :style=>"color:red;" %></td>
             </tr>
