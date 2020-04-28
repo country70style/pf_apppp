@@ -22,18 +22,22 @@
 }
 
 tr {
-    color: lightgrey;
+  color: lightgrey;
 }
 
 footer {
-    text-align: center;
+  text-align: center;
 }
 
 .navbar-nav {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
 .nav-item {
-    margin: 0 30px;
+  margin: 0 30px;
+}
+
+h1 {
+  color: white;
 }
  
