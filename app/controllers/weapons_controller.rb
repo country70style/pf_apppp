@@ -5,6 +5,7 @@ class WeaponsController < ApplicationController
   # GET /weapons.json
   def index
     @weapons = Weapon.all
+    @posts = Post.find_by(weapon_id: params[:weapon_id])
   end
 
   # GET /weapons/1
