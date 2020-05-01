@@ -5,7 +5,8 @@ class WeaponsController < ApplicationController
   # GET /weapons.json
   def index
     @weapons = Weapon.all
-    @posts = Post.find_by(weapon_id: params[:weapon_id])
+    @posts_in_weapon = Post.where.not(weapon_id: nil)
+
   end
 
   # GET /weapons/1
