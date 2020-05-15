@@ -5,4 +5,6 @@
 <h2>新着コメント</h2>
 <%= render @posts %>
 
+<%= paginate @posts %>
+
 <% link_to 'New Post', new_post_path, :style=>"color:yellow;" %>

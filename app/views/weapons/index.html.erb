@@ -34,18 +34,10 @@
     </div>
   </table>
 </div>
-
-<div class="card mb-3">
-  <div class="card-body">
-    <% @posts_in_weapon.each do |post_weapon| %>
-      <h5 class="card-title"><%= post_weapon.id %></h5>
-      <p class="card-text"><%= post_weapon.text %></p>
-      <p class="card-text"><%= post_weapon.like %></p>
-      <p class="card-text"><%= post_weapon.weapon_id %></p>
-      <p class="card-text"><%= post_weapon.perk_id %></p>
-    <% end %>
-  </div>
-</div>
+<%= paginate @weapons %>
 
 <%= link_to 'New Weapon', new_weapon_path, :style=>"color:yellow;" %>  |
 <%= link_to 'New Post', new_post_path, :style=>"color:red" %>
+
+<%= render @posts_in_weapon %>
+
