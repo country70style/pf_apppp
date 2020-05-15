@@ -1,9 +1,9 @@
 <div class="card mb-3">
   <div class="card-body">
-    <h5 class="card-title"><%= post.text %></h5>
-    <p class="card-text"><%= post.like %></p>
-    <p class="card-text"><%= post.weapon_id %></p>
-    <p class="card-text"><%= post.perk_id %></p>
+    <h5 class="card-title">コメント<br><%= post.text %></h5>
+    <p class="card-text">評価<br><%= post.like %></p>
+    <p class="card-text">武器No.<br><%= post.weapon_id %></p>
+    <p class="card-text">パークNo.<br><%= post.perk_id %></p>
     <%= link_to 'Show', post, class: "btn btn-outline-primary" %>
     <%= link_to 'Edit', edit_post_path(post), class: "btn btn-outline-primary" %>
     <%#=

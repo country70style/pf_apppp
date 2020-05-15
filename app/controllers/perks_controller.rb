@@ -5,6 +5,7 @@ class PerksController < ApplicationController
   # GET /perks.json
   def index
     @perks = Perk.all.page(params[:page]).per(10)
+    @posts_in_perk = Post.where.not(perk_id: nil)
   end
 
   # GET /perks/1

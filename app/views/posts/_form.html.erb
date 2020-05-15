@@ -12,26 +12,32 @@
   <% end %>
 
   <div class="field form-group">
-    <%= form.label :text %>
+    <%= form.label :コメント %>
     <%= form.text_field :text, class:"form-control" %>
   </div>
 
   <div class="field form-group">
-    <%= form.label :like %>
+    <%= form.label :評価 %>
     <%= form.number_field :like, class:"form-control" %>
   </div>
 
   <div class="field form-group">
-    <%= form.label :weapon_id %>
+    <%= form.label :武器 %>
     <%= form.number_field :weapon_id, class:"form-control" %>
+    <small id="weapon-tip" class="form-text text-muted">
+      武器No.を入力してください
+    </small>
   </div>
 
   <div class="field form-group">
-    <%= form.label :perk_id %>
+    <%= form.label :パーク %>
     <%= form.number_field :perk_id, class:"form-control" %>
+    <small id="perk-tip" class="form-text text-muted">
+      パークNo.を入力してください
+    </small>
   </div>
-
+  
   <div class="actions">
-    <%= form.submit class: "btn btn-primary" %>
+    <%= form.submit '投稿する', class: "btn btn-primary" %>
   </div>
 <% end %>
