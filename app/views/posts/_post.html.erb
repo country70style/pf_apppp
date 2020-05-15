@@ -4,10 +4,10 @@
     <p class="card-text">評価<br><%= post.like %></p>
     <p class="card-text">武器No.<br><%= post.weapon_id %></p>
     <p class="card-text">パークNo.<br><%= post.perk_id %></p>
-    <%= link_to 'Show', post, class: "btn btn-outline-primary" %>
-    <%= link_to 'Edit', edit_post_path(post), class: "btn btn-outline-primary" %>
-    <%#=
+    <%= link_to '詳細', post, class: "btn btn-outline-primary text-right" %>
+    <%= link_to '編集', edit_post_path(post), class: "btn btn-outline-primary text-right" %>
+    <!--
     <%= link_to 'Destroy', post, method: :delete, data: {confirm: 'Are you sure?' }, class: "btn-outline-danger" %>
-    
+    -->
   </div>
 </div>
