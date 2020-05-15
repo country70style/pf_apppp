@@ -4,7 +4,7 @@ class PerksController < ApplicationController
   # GET /perks
   # GET /perks.json
   def index
-    @perks = Perk.page(params[:page]).per(10)
+    @perks = Perk.all.page(params[:page]).per(10)
   end
 
   # GET /perks/1
