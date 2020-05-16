@@ -1,6 +1,8 @@
 <div class="card text-white bg-dark border-warning mb-3">
   <div class="card-body">
-    <h5 class="card-title">コメント<br><%= post.text %></h5>
+    <h5 class="card-title">コメント<br>
+      <%= post.text %><%= button_to 'いいね', tweet_likes_path(@tweet) %>
+    </h5>
     <p class="card-text">評価<br><%= post.like %></p>
     <p class="card-text">武器No.<br><%= post.weapon_id %></p>
     <p class="card-text">パークNo.<br><%= post.perk_id %></p>
