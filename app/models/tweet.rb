@@ -1,1 +1,0 @@
-has many :likes, dependent: destroy
