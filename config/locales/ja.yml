@@ -6,7 +6,5 @@ ja:
       previous: 前
       next: 次
       truncate: ...
-  helpers:
-    form:
-      submit: 保存する
+  
     
