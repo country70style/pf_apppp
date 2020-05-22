@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all.order(created_at: :desc).page(params[:page]).per(5)
-    @weapon = Weapon.where(all: :desc)
+    @weapon = Weapon.order(created_at: :desc)
   end
 
   # GET /posts/1
