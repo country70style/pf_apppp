@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :weapons
     
   resources :posts do
+    resources :post_likes, only: [:create]
     resources :likes, only: [:create]
   end
   root to: 'posts#index'

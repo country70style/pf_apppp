@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_17_075039) do
+ActiveRecord::Schema.define(version: 2020_05_25_053028) do
 
   create_table "likes", force: :cascade do |t|
     t.integer "weapon_id", null: false
     t.integer "perk_id", null: false
+    t.string "ip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["perk_id"], name: "index_likes_on_perk_id"
@@ -27,6 +28,14 @@ ActiveRecord::Schema.define(version: 2020_05_17_075039) do
     t.text "context"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "post_likes", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.string "ip"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_post_likes_on_post_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -49,4 +58,5 @@ ActiveRecord::Schema.define(version: 2020_05_17_075039) do
 
   add_foreign_key "likes", "perks"
   add_foreign_key "likes", "weapons"
+  add_foreign_key "post_likes", "posts"
 end
