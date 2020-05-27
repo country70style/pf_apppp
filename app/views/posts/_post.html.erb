@@ -2,7 +2,7 @@
   <div class="card-body">
     <h5 class="card-title">コメント<br><%= post.text %></h5>
     
-    <%= button_to 'いいね', '/likes/create/' + post.id, {params: {post_id_for_like: post.id}} %>
+    <%= button_to 'いいね', post_post_likes_path(post) %>
   
     <p class="card-text">評価<br><%= post.like %></p>
     <p class="card-text">武器No.<br><%= post.weapon_id %></p>
