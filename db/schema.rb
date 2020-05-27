@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2020_05_25_053028) do
   create_table "likes", force: :cascade do |t|
     t.integer "weapon_id", null: false
     t.integer "perk_id", null: false
-    t.string "ip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["perk_id"], name: "index_likes_on_perk_id"

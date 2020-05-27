@@ -6,7 +6,6 @@ class PostLikesController < ApplicationController
       redirect_back(fallback_location: root_path)
       flash[:notice] = "すでにいいねしています"
     else
-    binding.pry
       @like = PostLike.create(post_id: params[:post_id], ip: request.remote_ip)
       redirect_back(fallback_location: root_path)
     end
