@@ -1,4 +1,4 @@
-class LikesController < ApplicationController
+class WeaponLikesController < ApplicationController
   def create
     @post_like = Post.find(params[:post_id_for_like])
     binding.pry
