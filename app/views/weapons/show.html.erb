@@ -23,5 +23,7 @@
   <%= @weapon.context %>
 </p>
 
+<%= button_to 'いいね', '/weapon_likes/create', method: :get %>
+
 <%= link_to 'Edit', edit_weapon_path(@weapon), :style=>"color:lightgreen;" %> |
 <%= link_to 'Back', weapons_path, :style=>"color:white;" %>

@@ -1,3 +1,3 @@
 class Weapon < ApplicationRecord
-  has_many :likes, dependent: :destroy
+  has_many :weapon_likes, dependent: :destroy
 end
