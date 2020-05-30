@@ -1,6 +1,5 @@
 class WeaponLikesController < ApplicationController
   def create
-    binding.pry
     @weapons = Weapon.all.page(params[:page]).per(10)
     @alreadylike = WeaponLike.find_by(ip: request.remote_ip, weapon_id: params[:weapon_id])
     if @alreadylike

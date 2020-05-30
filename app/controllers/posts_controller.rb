@@ -22,6 +22,16 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def search
+    if params[:text].present?
+      @posts = Post.where('text LIKE ?', "%#{params[:keyword]}%")
+      binding.pry
+      redirect_to @post
+    else
+      @posts = Post.none
+    end
+  end
+
   # POST /posts
   # POST /posts.json
   def create

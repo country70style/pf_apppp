@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_29_075535) do
+ActiveRecord::Schema.define(version: 2020_05_30_060120) do
 
   create_table "perks", force: :cascade do |t|
     t.string "name"
@@ -39,11 +39,9 @@ ActiveRecord::Schema.define(version: 2020_05_29_075535) do
 
   create_table "weapon_likes", force: :cascade do |t|
     t.integer "weapon_id", null: false
-    t.integer "perk_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "ip"
-    t.index ["perk_id"], name: "index_weapon_likes_on_perk_id"
     t.index ["weapon_id"], name: "index_weapon_likes_on_weapon_id"
   end
 
@@ -57,6 +55,5 @@ ActiveRecord::Schema.define(version: 2020_05_29_075535) do
   end
 
   add_foreign_key "post_likes", "posts"
-  add_foreign_key "weapon_likes", "perks"
   add_foreign_key "weapon_likes", "weapons"
 end
