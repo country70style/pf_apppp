@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order(created_at: :desc).page(params[:page]).per(5)
+    @posts = Post.all.order(created_at: :desc).page(params[:page]).per(5).search(params[:text])
     @weapon = Weapon.order(created_at: :desc)
   end
 
@@ -20,16 +20,6 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-  end
-
-  def search
-    if params[:text].present?
-      @posts = Post.where('text LIKE ?', "%#{params[:keyword]}%")
-      binding.pry
-      redirect_to @post
-    else
-      @posts = Post.none
-    end
   end
 
   # POST /posts
