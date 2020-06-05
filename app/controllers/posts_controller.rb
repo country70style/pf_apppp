@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @posts = Post.find(params[:id])
   end
 
   # GET /posts/new
@@ -23,13 +24,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    if params[:text].present?
-      @posts = Post.where('text LIKE ?', "%#{params[:keyword]}%")
-      binding.pry
-      redirect_to @post
-    else
-      @posts = Post.none
-    end
+    @posts = Post.search(params[:text])
   end
 
   # POST /posts

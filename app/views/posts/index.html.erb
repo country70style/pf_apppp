@@ -3,12 +3,14 @@
   <h1>fallout76徹底攻略</h1>
 </div>
 
-<%= form_with url: search_posts_path, method: :get, local: true do |f| %>
-  <%= f.text_field :text %>
-  <%= f.submit :search %>
+<p>検索</p>
+<%= form_tag(search_posts_path, :method => 'get') do %>
+  <%= text_field_tag :text %>
+  <%= submit_tag 'Search', :name => nil %>
 <% end %>
 
 <h2>新着コメント</h2>
+
 <%= render @posts %>
 
 <%= paginate @posts %>
